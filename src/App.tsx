@@ -247,10 +247,13 @@ function App() {
 			
 			{/* Navigation Header */}
 			<header className="relative z-20 flex items-center justify-between px-6 py-5 md:px-10 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
-				<div className="flex items-center gap-2">
+				<button 
+					onClick={() => setActiveSection('home')}
+					className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+				>
 					<div className="h-8 w-8 rounded bg-brand" />
 					<span className="text-lg font-semibold tracking-wide">Wik Edits</span>
-				</div>
+				</button>
 				<nav className="hidden gap-6 text-sm md:flex">
 					<button 
 						onClick={() => setActiveSection('home')}
