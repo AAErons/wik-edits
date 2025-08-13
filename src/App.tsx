@@ -23,16 +23,27 @@ function App() {
 							<div className="max-w-4xl mx-auto">
 								<h2 className="text-2xl font-bold mb-6 text-center">Showreel</h2>
 								<div className="relative aspect-video w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
+									{/* Try multiple embed methods for better quality */}
 									<iframe
 										className="w-full h-full"
-										src="https://www.youtube.com/embed/_Y5WufLwvrE?vq=hd1080&modestbranding=1&rel=0"
+										src="https://www.youtube.com/embed/_Y5WufLwvrE?vq=hd1080&modestbranding=1&rel=0&autoplay=0&cc_load_policy=0&iv_load_policy=3&fs=1&disablekb=0&enablejsapi=1&origin=https://wik-edits.vercel.app"
 										title="Wik Edits Showreel"
 										frameBorder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowFullScreen
 									/>
 								</div>
-								<p className="text-center text-zinc-400 mt-4 text-sm">Experience the full showreel above</p>
+								<p className="text-center text-zinc-400 mt-4 text-sm">
+									Experience the full showreel above • 
+									<a 
+										href="https://www.youtube.com/watch?v=_Y5WufLwvrE" 
+										target="_blank" 
+										rel="noopener noreferrer"
+										className="text-brand hover:text-brand-light underline"
+									>
+										Watch on YouTube for highest quality
+									</a>
+								</p>
 							</div>
 
 							{/* Quick Stats */}
