@@ -25,7 +25,7 @@ function App() {
 								<div className="relative aspect-video w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
 									<iframe
 										className="w-full h-full"
-										src="https://www.youtube.com/embed/_Y5WufLwvrE"
+										src="https://www.youtube.com/embed/_Y5WufLwvrE?vq=hd1080&modestbranding=1&rel=0"
 										title="Wik Edits Showreel"
 										frameBorder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
