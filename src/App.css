@@ -1,9 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/* Unused after Tailwind integration; keeping file to avoid import errors if referenced. */
 
 .logo {
   height: 6em;
