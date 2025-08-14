@@ -77,7 +77,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 							
 							{/* Showreel Video Section */}
 							<div className="max-w-4xl mx-auto">
-								<h2 className="text-2xl font-bold mb-6 text-center">Showreel</h2>
+
 								<div className="relative aspect-video w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
 									{/* Try multiple embed methods for better quality */}
 									<iframe
@@ -110,7 +110,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
 						{/* Testimonials */}
 						<div className="mt-16">
-							<h2 className="text-2xl font-bold mb-6 text-center">What creators say</h2>
+
 							<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 								{/* ScrubNoob */}
 								<article className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-xl">
