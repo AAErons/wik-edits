@@ -9,3 +9,16 @@ html, body, #root {
 body {
 	@apply bg-black text-white;
 }
+
+/* Success pulse check animation */
+@keyframes pulseCheck {
+	0% { transform: scale(0.8); opacity: 0; }
+	20% { transform: scale(1.05); opacity: 1; }
+	40% { transform: scale(1); }
+	60% { transform: scale(1.02); }
+	100% { transform: scale(1); }
+}
+
+.animate-pulse-check {
+	animation: pulseCheck 700ms ease-out forwards;
+}
