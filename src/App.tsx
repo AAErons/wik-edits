@@ -6,6 +6,7 @@ function App() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 	const YT_VIDEO_IDS = ['EZedaUShjcQ', 'OloaWHVb5Hs', '9wjiB3JgCcc', 'h-xRIv-uD3I', 'D5rPXYT3F_4', 'UA0jrwFMlX0']
 	const VIDEO_ESSAY_IDS = ['954HzC-uxhA', 'OqU1Uu6MlIs', 'IOxhv9ipen8', '_UP7kIgl0Xk', 'HW68h4coN70', 'b_BXMLDnuH4']
+	const CONTENT_EDITING_IDS = ['4_Gr3zXY7oY', 'A2U9e1wfuq0', 'xeAjHr2Az58', '6fmn6dl4zxE', 'zPtcFhrnTVY', 'JILqiNT8K6A', 'ftg5N3z44zo', 'VQN5WpmFrEQ']
 	const contactNameRef = useRef<HTMLInputElement | null>(null)
 	const formRef = useRef<HTMLFormElement | null>(null)
 	const [isSubmitting, setIsSubmitting] = useState(false)
@@ -165,7 +166,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 					<section className="relative z-10">
 						<div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
 						<h1 className="text-4xl font-bold mb-8 text-center">Video Essays</h1>
-						<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+						<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 							{VIDEO_ESSAY_IDS.map((videoId) => (
 								<div key={videoId} className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
 									<div className="relative aspect-video w-full">
@@ -188,51 +189,33 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 				return (
 					<section className="relative z-10">
 						<div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-							<h1 className="text-4xl font-bold mb-8">Content Editing</h1>
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-								<div className="space-y-6">
-									<h2 className="text-2xl font-semibold">Services</h2>
-									<div className="space-y-4">
-										<div className="flex items-start gap-3">
-											<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-											<div>
-												<h3 className="font-medium">YouTube Optimization</h3>
-												<p className="text-zinc-400 text-sm">Thumbnails, titles, descriptions, and SEO optimization</p>
-											</div>
-										</div>
-										<div className="flex items-start gap-3">
-											<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-											<div>
-												<h3 className="font-medium">Social Media Cuts</h3>
-												<p className="text-zinc-400 text-sm">Instagram, TikTok, and Twitter-optimized content</p>
-											</div>
-										</div>
-										<div className="flex items-start gap-3">
-											<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-											<div>
-												<h3 className="font-medium">Stream Highlights</h3>
-												<p className="text-zinc-400 text-sm">Twitch and YouTube stream compilation editing</p>
-											</div>
+							<h1 className="text-4xl font-bold mb-8 text-center">Content Editing</h1>
+							<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+								{CONTENT_EDITING_IDS.map((videoId) => (
+									<div key={videoId} className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
+										<div className="relative aspect-video w-full">
+											<iframe
+												className="h-full w-full"
+												src={`https://www.youtube.com/embed/${videoId}?vq=hd1080&modestbranding=1&rel=0&autoplay=0&fs=1`}
+												title={`Content editing ${videoId}`}
+												frameBorder="0"
+												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+												allowFullScreen
+											/>
 										</div>
 									</div>
-								</div>
-								<div className="rounded-xl border border-zinc-800 bg-zinc-950 p-6">
-									<h3 className="font-semibold mb-4">Pricing</h3>
-									<div className="space-y-3">
-										<div className="flex justify-between">
-											<span>Basic Edit (5-10 min)</span>
-											<span className="text-brand">$50-100</span>
-										</div>
-										<div className="flex justify-between">
-											<span>Standard Edit (10-20 min)</span>
-											<span className="text-brand">$100-200</span>
-										</div>
-										<div className="flex justify-between">
-											<span>Premium Edit (20+ min)</span>
-											<span className="text-brand">$200+</span>
-										</div>
-									</div>
-								</div>
+								))}
+							</div>
+						</div>
+					</section>
+				)
+			case 'shorts':
+				return (
+					<section className="relative z-10">
+						<div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
+							<h1 className="text-4xl font-bold mb-8 text-center">Shorts</h1>
+							<div className="text-center text-zinc-400">
+								<p>Coming soon...</p>
 							</div>
 						</div>
 					</section>
@@ -245,7 +228,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 							
 							
 							{/* Montages grid (same format as Video Essays) */}
-							<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+							<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 								{YT_VIDEO_IDS.map((videoId) => (
 									<div key={videoId} className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
 										<div className="relative aspect-video w-full">
@@ -268,7 +251,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 				return (
 					<section className="relative z-10">
 						<div className="mx-auto max-w-4xl px-6 py-20 md:px-10">
-							<h1 className="text-4xl font-bold mb-8 text-center">About Wik Edits</h1>
+							<h1 className="text-4xl font-bold mb-8 text-center">About Wik</h1>
 							<div className="space-y-8">
 								<div className="text-center">
 									<div className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-brand/60">
@@ -292,13 +275,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 													<p className="text-zinc-400 text-sm">Video editing experience</p>
 												</div>
 											</li>
-											<li className="flex items-start gap-3">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-brand mt-0.5"><path fillRule="evenodd" d="M2.25 12a9.75 9.75 0 1 1 19.5 0 9.75 9.75 0 0 1-19.5 0Zm14.03-2.78a.75.75 0 0 0-1.06-1.06L10 13.69l-1.72-1.72a.75.75 0 1 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.75-5.75Z" clipRule="evenodd"/></svg>
-												<div>
-													<h4 className="font-medium">100+ Projects</h4>
-													<p className="text-zinc-400 text-sm">Completed successfully</p>
-												</div>
-											</li>
+
 											<li className="flex items-start gap-3">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-brand mt-0.5"><path fillRule="evenodd" d="M2.25 12a9.75 9.75 0 1 1 19.5 0 9.75 9.75 0 0 1-19.5 0Zm14.03-2.78a.75.75 0 0 0-1.06-1.06L10 13.69l-1.72-1.72a.75.75 0 1 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.75-5.75Z" clipRule="evenodd"/></svg>
 												<div>
@@ -312,7 +289,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									<div>
 										<h3 className="text-xl font-semibold mb-4 md:text-right">Tools & Software</h3>
 										<ul className="space-y-2 md:space-y-1 md:w-full md:max-w-md md:ml-auto">
-											{['Adobe Premiere Pro', 'After Effects', 'Blender', 'FL Studio'].map((tool, index) => (
+											{['Adobe Premiere Pro', 'Adobe After Effects', 'Blender', 'FL Studio'].map((tool, index) => (
 												<li key={index} className="flex items-center gap-3 md:grid md:grid-cols-[1fr_0.5rem_auto] md:gap-3 md:w-full">
 													{/* spacer column for right alignment */}
 													<span aria-hidden className="hidden md:block" />
@@ -321,6 +298,100 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 												</li>
 											))}
 										</ul>
+									</div>
+								</div>
+								
+								{/* Services & Pricing */}
+								<div className="space-y-8">
+									<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+										<div className="space-y-6">
+											<h3 className="text-xl font-semibold">Services</h3>
+											<div className="space-y-4">
+												<div className="flex items-start gap-3">
+													<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
+													<div>
+														<h4 className="font-medium">YouTube Optimization</h4>
+														<p className="text-zinc-400 text-sm">Thumbnails, titles, descriptions, and SEO optimization</p>
+													</div>
+												</div>
+												<div className="flex items-start gap-3">
+													<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
+													<div>
+														<h4 className="font-medium">Social Media Cuts</h4>
+														<p className="text-zinc-400 text-sm">Instagram, TikTok, and Twitter-optimized content</p>
+													</div>
+												</div>
+												<div className="flex items-start gap-3">
+													<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
+													<div>
+														<h4 className="font-medium">Stream Highlights</h4>
+														<p className="text-zinc-400 text-sm">Twitch and YouTube stream compilation editing</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div className="rounded-xl border border-zinc-800 bg-zinc-950 p-6">
+											<h3 className="font-semibold mb-4">Pricing</h3>
+											<div className="space-y-3">
+												<div className="flex justify-between">
+													<span>Basic Edit (5-10 min)</span>
+													<span className="text-brand">$50-100</span>
+												</div>
+												<div className="flex justify-between">
+													<span>Standard Edit (10-20 min)</span>
+													<span className="text-brand">$100-200</span>
+												</div>
+												<div className="flex justify-between">
+													<span>Premium Edit (20+ min)</span>
+													<span className="text-brand">$200+</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								{/* Social Media Links */}
+								<div className="text-center pt-8">
+									<h3 className="text-xl font-semibold mb-6">Contacts/Links</h3>
+									<div className="flex flex-wrap justify-center gap-4">
+										<a 
+											href="https://www.youtube.com/@wikthe3rd" 
+											target="_blank" 
+											rel="noopener noreferrer"
+											className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-red-500">
+												<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+											</svg>
+											YouTube
+										</a>
+										<a 
+											href="https://x.com/Wikthe3rd" 
+											target="_blank" 
+											rel="noopener noreferrer"
+											className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-zinc-300">
+												<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+											</svg>
+											Twitter
+										</a>
+										<a 
+											href="mailto:Wikthe3rd@gmail.com"
+											className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-blue-500">
+												<path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+												<path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+											</svg>
+											Email
+										</a>
+										<div className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium border border-zinc-800">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-indigo-500">
+												<path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0027-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.019 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+											</svg>
+											@wikthe3rd
+										</div>
 									</div>
 								</div>
 								
@@ -343,7 +414,22 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
 	return (
 		<main className="relative min-h-dvh overflow-hidden">
-			<div className="pointer-events-none absolute inset-0 bg-grid-radial" />
+			{/* Background WebM video with lowered opacity - only shown on Home and About */}
+			{(activeSection === 'home' || activeSection === 'about') && (
+				<div className="fixed inset-0 z-0">
+					<video 
+						autoPlay 
+						loop 
+						muted 
+						playsInline
+						className="w-full h-full object-scale-down opacity-20"
+					>
+						<source src="/background.webm" type="video/webm" />
+					</video>
+				</div>
+			)}
+			
+			<div className="pointer-events-none absolute inset-0 bg-grid-radial z-10" />
 			
 			{/* Navigation Header */}
 			<header className="relative z-20 flex items-center justify-between px-6 py-5 md:px-10 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
@@ -374,6 +460,12 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 						Montages
 					</button>
 					<button 
+						onClick={() => navigateTo('shorts')}
+						className={`hover:text-white transition-colors ${activeSection === 'shorts' ? 'text-brand' : 'text-zinc-300'}`}
+					>
+						Shorts
+					</button>
+					<button 
 						onClick={() => navigateTo('content-editing')}
 						className={`hover:text-white transition-colors ${activeSection === 'content-editing' ? 'text-brand' : 'text-zinc-300'}`}
 					>
@@ -391,7 +483,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 						onClick={focusContactForm}
 						className="hidden md:inline-flex rounded-full bg-brand px-4 py-2 text-sm font-medium hover:bg-brand-dark transition-colors"
 					>
-						Get a quote
+						Contact
 					</button>
 					<button
 						aria-label="Toggle menu"
@@ -433,11 +525,12 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 							<button onClick={() => navigateTo('home')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'home' ? 'text-brand' : 'text-zinc-300'}`}>Home</button>
 							<button onClick={() => navigateTo('video-essays')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'video-essays' ? 'text-brand' : 'text-zinc-300'}`}>Video Essays</button>
 							<button onClick={() => navigateTo('montages')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'montages' ? 'text-brand' : 'text-zinc-300'}`}>Montages</button>
+							<button onClick={() => navigateTo('shorts')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'shorts' ? 'text-brand' : 'text-zinc-300'}`}>Shorts</button>
 							<button onClick={() => navigateTo('content-editing')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'content-editing' ? 'text-brand' : 'text-zinc-300'}`}>Content Editing</button>
 							<button onClick={() => navigateTo('about')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'about' ? 'text-brand' : 'text-zinc-300'}`}>About</button>
 						</nav>
 						<div className="mt-6">
-							<button onClick={focusContactForm} className="inline-flex w-full items-center justify-center rounded-full bg-brand px-4 py-2 text-sm font-medium hover:bg-brand-dark">Get a quote</button>
+							<button onClick={focusContactForm} className="inline-flex w-full items-center justify-center rounded-full bg-brand px-4 py-2 text-sm font-medium hover:bg-brand-dark">Contact</button>
 						</div>
 						</div>
 					</div>
@@ -449,17 +542,16 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 			{/* Contact Footer */}
 			<footer id="contact" className="relative z-10 border-t border-zinc-900/60 bg-black/60 px-6 py-12 md:px-10">
 				<div className="mx-auto max-w-6xl">
-					<h2 className="text-xl font-semibold">Let's build your next montage</h2>
+					<h2 className="text-xl font-semibold">Lets Build your next video. Let's build your next montage.</h2>
 					<p className="mt-2 max-w-2xl text-sm text-zinc-400">Tell me the vibe, tracks, and clips. I'll handle the pacing, transitions, and hype.</p>
 						<div className="relative mt-6">
 							<div className={`transition-all duration-300 ${submitState !== 'idle' ? 'opacity-0 scale-95' : 'opacity-100'}`}>
-								<form ref={formRef} onSubmit={handleContactSubmit} className="grid grid-cols-1 gap-4 md:grid-cols-3">
+								<form ref={formRef} onSubmit={handleContactSubmit} className="grid grid-cols-1 gap-4 md:grid-cols-2">
 									<input ref={contactNameRef} name="name" id="name" autoComplete="name" required className="rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600 md:col-span-1" placeholder="Your name" />
 									<input type="email" name="email" id="email" autoComplete="email" required className="rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600 md:col-span-1" placeholder="Email or Discord" />
-									<input type="url" name="projectLink" id="projectLink" className="rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600 md:col-span-1" placeholder="Project link (Drive/YouTube)" />
-									<textarea name="message" id="message" className="md:col-span-3 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600" rows={4} placeholder="What are you looking for?" />
+									<textarea name="message" id="message" className="md:col-span-2 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600" rows={4} placeholder="What are you looking for?" />
 									<input type="hidden" name="_subject" value="New Wik Edits inquiry" />
-									<button type="submit" disabled={isSubmitting} className="md:col-span-3 inline-flex w-full items-center justify-center rounded-lg bg-brand px-5 py-2 text-sm font-semibold hover:bg-brand-dark disabled:opacity-60">
+									<button type="submit" disabled={isSubmitting} className="md:col-span-2 inline-flex w-full items-center justify-center rounded-lg bg-brand px-5 py-2 text-sm font-semibold hover:bg-brand-dark disabled:opacity-60">
 										{isSubmitting ? 'Sending…' : 'Send'}
 									</button>
 								</form>
