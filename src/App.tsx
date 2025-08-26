@@ -94,14 +94,10 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 							</div>
 
 							{/* Quick Stats */}
-							<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
 								<div className="text-center">
 									<div className="text-3xl font-bold text-brand mb-2">4K</div>
 									<div className="text-zinc-400">Workflow</div>
-								</div>
-								<div className="text-center">
-									<div className="text-3xl font-bold text-brand mb-2">Sync</div>
-									<div className="text-zinc-400">To Beat</div>
 								</div>
 								<div className="text-center">
 									<div className="text-3xl font-bold text-brand mb-2">Sound</div>
@@ -213,9 +209,44 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 				return (
 					<section className="relative z-10">
 						<div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
-							<h1 className="text-4xl font-bold mb-8 text-center">Shorts</h1>
-							<div className="text-center text-zinc-400">
-								<p>Coming soon...</p>
+							<h1 className="text-4xl font-bold mb-8 text-center">TikToks</h1>
+							<div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+								<div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
+									<div className="relative aspect-[9/16] w-full">
+										<iframe
+											className="h-full w-full"
+											src={`https://www.tiktok.com/embed/v2/7478756656571174190`}
+											title={`TikTok 7478756656571174190`}
+											frameBorder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowFullScreen
+										/>
+									</div>
+								</div>
+								<div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
+									<div className="relative aspect-[9/16] w-full">
+										<iframe
+											className="h-full w-full"
+											src={`https://www.tiktok.com/embed/v2/7486925939780259095`}
+											title={`TikTok 7486925939780259095`}
+											frameBorder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowFullScreen
+										/>
+									</div>
+								</div>
+								<div className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/60 shadow-2xl">
+									<div className="relative aspect-[9/16] w-full">
+										<iframe
+											className="h-full w-full"
+											src={`https://www.tiktok.com/embed/v2/7477965440795381035`}
+											title={`TikTok 7477965440795381035`}
+											frameBorder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowFullScreen
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -463,7 +494,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 						onClick={() => navigateTo('shorts')}
 						className={`hover:text-white transition-colors ${activeSection === 'shorts' ? 'text-brand' : 'text-zinc-300'}`}
 					>
-						Shorts
+						TikToks
 					</button>
 					<button 
 						onClick={() => navigateTo('content-editing')}
@@ -525,7 +556,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 							<button onClick={() => navigateTo('home')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'home' ? 'text-brand' : 'text-zinc-300'}`}>Home</button>
 							<button onClick={() => navigateTo('video-essays')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'video-essays' ? 'text-brand' : 'text-zinc-300'}`}>Video Essays</button>
 							<button onClick={() => navigateTo('montages')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'montages' ? 'text-brand' : 'text-zinc-300'}`}>Montages</button>
-							<button onClick={() => navigateTo('shorts')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'shorts' ? 'text-brand' : 'text-zinc-300'}`}>Shorts</button>
+							<button onClick={() => navigateTo('shorts')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'shorts' ? 'text-brand' : 'text-zinc-300'}`}>TikToks</button>
 							<button onClick={() => navigateTo('content-editing')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'content-editing' ? 'text-brand' : 'text-zinc-300'}`}>Content Editing</button>
 							<button onClick={() => navigateTo('about')} className={`w-full rounded-md px-3 py-2 text-left text-sm hover:bg-zinc-900 ${activeSection === 'about' ? 'text-brand' : 'text-zinc-300'}`}>About</button>
 						</nav>
@@ -542,8 +573,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 			{/* Contact Footer */}
 			<footer id="contact" className="relative z-10 border-t border-zinc-900/60 bg-black/60 px-6 py-12 md:px-10">
 				<div className="mx-auto max-w-6xl">
-					<h2 className="text-xl font-semibold">Lets Build your next video. Let's build your next montage.</h2>
-					<p className="mt-2 max-w-2xl text-sm text-zinc-400">Tell me the vibe, tracks, and clips. I'll handle the pacing, transitions, and hype.</p>
+					<h2 className="text-xl font-semibold">Lets Build your next video.</h2>
 						<div className="relative mt-6">
 							<div className={`transition-all duration-300 ${submitState !== 'idle' ? 'opacity-0 scale-95' : 'opacity-100'}`}>
 								<form ref={formRef} onSubmit={handleContactSubmit} className="grid grid-cols-1 gap-4 md:grid-cols-2">
