@@ -93,67 +93,55 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
 							</div>
 
-							{/* Quick Stats */}
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-								<div className="text-center">
-									<div className="text-3xl font-bold text-brand mb-2">4K</div>
-									<div className="text-zinc-400">Workflow</div>
-								</div>
-								<div className="text-center">
-									<div className="text-3xl font-bold text-brand mb-2">Sound</div>
-									<div className="text-zinc-400">Design</div>
+							{/* Testimonials */}
+							<div className="mt-16">
+
+								<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+									{/* ScrubNoob */}
+									<article className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-xl">
+										<header className="mb-4 flex items-center gap-3">
+											<img src="/icons/scrub.jpeg" alt="ScrubNoob avatar" className="h-12 w-12 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+											<div>
+												<div className="flex items-center gap-2">
+													<h3 className="text-base font-semibold leading-none">ScrubNoob</h3>
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-sky-400">
+														<path d="M9 12.75 11.25 15l3.75-4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+													</svg>
+												</div>
+												<p className="text-xs text-zinc-400">129K subscribers</p>
+											</div>
+										</header>
+										<blockquote className="relative text-zinc-200">
+											<span aria-hidden className="absolute -left-3 -top-2 text-brand text-2xl">“</span>
+											<p className="pl-2 text-sm leading-6">
+												Wik created some absolutely banger montages for me and would highly recommend him for anyone thats looking to have their own montage. To this day i still get messages about the montages he worked on saying "this is the best montage ive ever seen" His editing is absolutely <em>*chefs kiss*</em>
+											</p>
+										</blockquote>
+									</article>
+
+									{/* Vars */}
+									<article className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-xl">
+										<header className="mb-4 flex items-center gap-3">
+											<img src="/icons/vars.jpeg" alt="Vars avatar" className="h-12 w-12 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+											<div>
+												<div className="flex items-center gap-2">
+													<h3 className="text-base font-semibold leading-none">Vars</h3>
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-sky-400">
+														<path d="M9 12.75 11.25 15l3.75-4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+													</svg>
+												</div>
+												<p className="text-xs text-zinc-400">208K subscribers</p>
+											</div>
+										</header>
+										<blockquote className="relative text-zinc-200">
+											<span aria-hidden className="absolute -left-3 -top-2 text-brand text-2xl">“</span>
+											<p className="pl-2 text-sm leading-6">
+												One of the most innovative editors I ever had. He always found something new to add to each project and never shirked quality, while still outputting videos for me very quickly. It was a pleasure working with him!
+											</p>
+										</blockquote>
+									</article>
 								</div>
 							</div>
-
-						{/* Testimonials */}
-						<div className="mt-16">
-
-							<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-								{/* ScrubNoob */}
-								<article className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-xl">
-									<header className="mb-4 flex items-center gap-3">
-										<img src="/icons/scrub.jpeg" alt="ScrubNoob avatar" className="h-12 w-12 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
-										<div>
-											<div className="flex items-center gap-2">
-												<h3 className="text-base font-semibold leading-none">ScrubNoob</h3>
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-sky-400">
-													<path d="M9 12.75 11.25 15l3.75-4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-												</svg>
-											</div>
-											<p className="text-xs text-zinc-400">129K subscribers</p>
-										</div>
-									</header>
-									<blockquote className="relative text-zinc-200">
-										<span aria-hidden className="absolute -left-3 -top-2 text-brand text-2xl">“</span>
-										<p className="pl-2 text-sm leading-6">
-											Wik created some absolutely banger montages for me and would highly recommend him for anyone thats looking to have their own montage. To this day i still get messages about the montages he worked on saying "this is the best montage ive ever seen" His editing is absolutely <em>*chefs kiss*</em>
-										</p>
-									</blockquote>
-								</article>
-
-								{/* Vars */}
-								<article className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-6 shadow-xl">
-									<header className="mb-4 flex items-center gap-3">
-										<img src="/icons/vars.jpeg" alt="Vars avatar" className="h-12 w-12 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
-										<div>
-											<div className="flex items-center gap-2">
-												<h3 className="text-base font-semibold leading-none">Vars</h3>
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-sky-400">
-													<path d="M9 12.75 11.25 15l3.75-4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-												</svg>
-											</div>
-											<p className="text-xs text-zinc-400">208K subscribers</p>
-										</div>
-									</header>
-									<blockquote className="relative text-zinc-200">
-										<span aria-hidden className="absolute -left-3 -top-2 text-brand text-2xl">“</span>
-										<p className="pl-2 text-sm leading-6">
-											One of the most innovative editors I ever had. He always found something new to add to each project and never shirked quality, while still outputting videos for me very quickly. It was a pleasure working with him!
-										</p>
-									</blockquote>
-								</article>
-							</div>
-						</div>
 						</div>
 					</section>
 				)
@@ -332,112 +320,61 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									</div>
 								</div>
 								
-								{/* Services & Pricing */}
-								<div className="space-y-8">
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-										<div className="space-y-6">
-											<h3 className="text-xl font-semibold">Services</h3>
-											<div className="space-y-4">
-												<div className="flex items-start gap-3">
-													<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-													<div>
-														<h4 className="font-medium">YouTube Optimization</h4>
-														<p className="text-zinc-400 text-sm">Thumbnails, titles, descriptions, and SEO optimization</p>
-													</div>
-												</div>
-												<div className="flex items-start gap-3">
-													<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-													<div>
-														<h4 className="font-medium">Social Media Cuts</h4>
-														<p className="text-zinc-400 text-sm">Instagram, TikTok, and Twitter-optimized content</p>
-													</div>
-												</div>
-												<div className="flex items-start gap-3">
-													<div className="w-2 h-2 bg-brand rounded-full mt-2 flex-shrink-0" />
-													<div>
-														<h4 className="font-medium">Stream Highlights</h4>
-														<p className="text-zinc-400 text-sm">Twitch and YouTube stream compilation editing</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="rounded-xl border border-zinc-800 bg-zinc-950 p-6">
-											<h3 className="font-semibold mb-4">Pricing</h3>
-											<div className="space-y-3">
-												<div className="flex justify-between">
-													<span>Basic Edit (5-10 min)</span>
-													<span className="text-brand">$50-100</span>
-												</div>
-												<div className="flex justify-between">
-													<span>Standard Edit (10-20 min)</span>
-													<span className="text-brand">$100-200</span>
-												</div>
-												<div className="flex justify-between">
-													<span>Premium Edit (20+ min)</span>
-													<span className="text-brand">$200+</span>
-												</div>
-											</div>
-										</div>
-									</div>
+							{/* Social Media Links */}
+							<div className="text-center pt-8">
+								<h3 className="text-xl font-semibold mb-6">Contacts/Links</h3>
+								<div className="flex flex-wrap justify-center gap-4">
+									<a 
+										href="https://www.youtube.com/@wikthe3rd" 
+										target="_blank" 
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
+									>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-red-500">
+											<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+										</svg>
+										YouTube
+									</a>
+									<a 
+										href="https://x.com/Wikthe3rd" 
+										target="_blank" 
+										rel="noopener noreferrer"
+										className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
+									>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-zinc-300">
+											<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+										</svg>
+										Twitter
+									</a>
+									<a 
+										href="mailto:Wikthe3rd@gmail.com"
+										className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
+									>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-blue-500">
+											<path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+											<path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+										</svg>
+										Email
+									</a>
+									<div className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium border border-zinc-800">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-indigo-500">
+											<path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0027-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.019 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+									</svg>
+									@wikthe3rd
 								</div>
+							</div>
+						</div>
 								
-								{/* Social Media Links */}
-								<div className="text-center pt-8">
-									<h3 className="text-xl font-semibold mb-6">Contacts/Links</h3>
-									<div className="flex flex-wrap justify-center gap-4">
-										<a 
-											href="https://www.youtube.com/@wikthe3rd" 
-											target="_blank" 
-											rel="noopener noreferrer"
-											className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
-										>
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-red-500">
-												<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-											</svg>
-											YouTube
-										</a>
-										<a 
-											href="https://x.com/Wikthe3rd" 
-											target="_blank" 
-											rel="noopener noreferrer"
-											className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
-										>
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-zinc-300">
-												<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-											</svg>
-											Twitter
-										</a>
-										<a 
-											href="mailto:Wikthe3rd@gmail.com"
-											className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium hover:bg-zinc-800/60 transition-colors border border-zinc-800"
-										>
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-blue-500">
-												<path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
-												<path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
-											</svg>
-											Email
-										</a>
-										<div className="inline-flex items-center gap-2 rounded-lg bg-zinc-900/60 px-4 py-2 text-sm font-medium border border-zinc-800">
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-indigo-500">
-												<path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0027-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.019 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
-											</svg>
-											@wikthe3rd
-										</div>
-									</div>
-								</div>
-								
-								<div className="text-center pt-8">
+						<div className="text-center pt-8">
 							<button 
 								onClick={focusContactForm}
 								className="inline-flex items-center gap-3 rounded-full bg-brand px-6 py-3 text-sm font-semibold hover:bg-brand-dark transition-colors"
 							>
 								Get in Touch
 							</button>
-								</div>
-							</div>
 						</div>
-					</section>
-				)
+					</div>
+				</section>
 			default:
 				return null
 		}
@@ -573,7 +510,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 			{/* Contact Footer */}
 			<footer id="contact" className="relative z-10 border-t border-zinc-900/60 bg-black/60 px-6 py-12 md:px-10">
 				<div className="mx-auto max-w-6xl">
-					<h2 className="text-xl font-semibold">Lets Build your next video.</h2>
+					<h2 className="text-xl font-semibold">Let's Build your next video.</h2>
 						<div className="relative mt-6">
 							<div className={`transition-all duration-300 ${submitState !== 'idle' ? 'opacity-0 scale-95' : 'opacity-100'}`}>
 								<form ref={formRef} onSubmit={handleContactSubmit} className="grid grid-cols-1 gap-4 md:grid-cols-2">
