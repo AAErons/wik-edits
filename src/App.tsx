@@ -69,10 +69,10 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 						<div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
 							<div className="text-center mb-16">
 								<h1 className="text-balance text-5xl font-extrabold tracking-tight md:text-7xl mb-6">
-									Wik Edits
+									Wik
 								</h1>
 								<p className="text-pretty text-zinc-300 md:text-xl max-w-3xl mx-auto">
-									Cinematic gaming edits that hit like a pentakill. Specialized in fast‑paced League of Legends montages, highlight reels, and story‑driven edits.
+								Professional Gaming Video Editor
 								</p>
 							</div>
 							
@@ -374,7 +374,9 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 							</button>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
+			)
 			default:
 				return null
 		}
