@@ -90,9 +90,10 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
 							</div>
 
-							{/* Collaborators Section */}
-							<div className="mt-16">
-								<div className="flex flex-wrap justify-center items-center gap-10 opacity-80">
+						{/* Collaborators Section */}
+						<div className="mt-16">
+							<h3 className="text-center text-2xl uppercase tracking-wide text-white font-semibold mb-6">Worked with</h3>
+							<div className="flex flex-wrap justify-center items-center gap-10 opacity-80">
 									<div className="flex flex-col items-center gap-3">
 										<img src="/icons/LHC.jpg" alt="LastHitCreative" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
 										<span className="text-base text-zinc-400">LastHitCreative</span>
