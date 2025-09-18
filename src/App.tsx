@@ -5,7 +5,7 @@ function App() {
 	const [activeSection, setActiveSection] = useState('home')
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 	const YT_VIDEO_IDS = ['EZedaUShjcQ', 'OloaWHVb5Hs', '9wjiB3JgCcc', 'h-xRIv-uD3I', 'D5rPXYT3F_4', 'UA0jrwFMlX0']
-	const VIDEO_ESSAY_IDS = ['954HzC-uxhA', 'OqU1Uu6MlIs', 'IOxhv9ipen8', '_UP7kIgl0Xk', 'HW68h4coN70', 'b_BXMLDnuH4']
+	const VIDEO_ESSAY_IDS = ['NzB9-GrfBx0', '954HzC-uxhA', 'OqU1Uu6MlIs', 'IOxhv9ipen8', '_UP7kIgl0Xk', 'HW68h4coN70']
 	const CONTENT_EDITING_IDS = ['4_Gr3zXY7oY', 'A2U9e1wfuq0', 'xeAjHr2Az58', '6fmn6dl4zxE', 'zPtcFhrnTVY', 'JILqiNT8K6A', 'ftg5N3z44zo', 'VQN5WpmFrEQ']
 	const contactNameRef = useRef<HTMLInputElement | null>(null)
 	const formRef = useRef<HTMLFormElement | null>(null)
@@ -71,9 +71,6 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 								<h1 className="text-balance text-5xl font-extrabold tracking-tight md:text-7xl mb-6">
 									Wik
 								</h1>
-								<p className="text-pretty text-zinc-300 md:text-xl max-w-3xl mx-auto">
-								Professional Gaming Video Editor
-								</p>
 							</div>
 							
 							{/* Showreel Video Section */}
@@ -91,6 +88,40 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									/>
 								</div>
 
+							</div>
+
+							{/* Collaborators Section */}
+							<div className="mt-16">
+								<div className="flex flex-wrap justify-center items-center gap-10 opacity-80">
+									<div className="flex flex-col items-center gap-3">
+										<img src="/icons/LHC.jpg" alt="LastHitCreative" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+										<span className="text-base text-zinc-400">LastHitCreative</span>
+									</div>
+									<div className="flex flex-col items-center gap-3">
+										<img src="/icons/vars.jpeg" alt="Vars" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+										<span className="text-base text-zinc-400">Vars</span>
+									</div>
+									<div className="flex flex-col items-center gap-3">
+										<img src="/icons/sunny.jpg" alt="SunnySplosion" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+										<span className="text-base text-zinc-400">SunnySplosion</span>
+									</div>
+									<div className="flex flex-col items-center gap-3">
+										<img src="/icons/MegalodonVT.jpg" alt="MegalodonVT" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+										<span className="text-base text-zinc-400">MegalodonVT</span>
+									</div>
+									<div className="flex flex-col items-center gap-3">
+										<img src="/icons/BamBaeYoh.jpg" alt="BamBaeYoh" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+										<span className="text-base text-zinc-400">BamBaeYoh</span>
+									</div>
+									<div className="flex flex-col items-center gap-3">
+										<img src="/icons/scrub.jpeg" alt="ScrubNoob" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+										<span className="text-base text-zinc-400">ScrubNoob</span>
+									</div>
+									<div className="flex flex-col items-center gap-3">
+										<img src="/icons/polstat.jpg" alt="PolsatGames" className="w-16 h-16 rounded-full object-cover ring-1 ring-zinc-800" loading="lazy" />
+										<span className="text-base text-zinc-400">PolsatGames</span>
+									</div>
+								</div>
 							</div>
 
 							{/* Testimonials */}
@@ -270,7 +301,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 				return (
 					<section className="relative z-10">
 						<div className="mx-auto max-w-4xl px-6 py-20 md:px-10">
-							<h1 className="text-4xl font-bold mb-8 text-center">About Wik</h1>
+							<h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
 							<div className="space-y-8">
 								<div className="text-center">
 									<div className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-brand/60">
@@ -278,8 +309,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									</div>
 									<h2 className="text-2xl font-semibold mb-4">Professional Gaming Video Editor</h2>
 									<p className="text-zinc-300 leading-relaxed">
-										Passionate about creating cinematic gaming content that captures the intensity and excitement of competitive gameplay. 
-										Specializing in League of Legends, FPS games, and competitive esports content.
+										I'm a freelance video editor based in Latvia, working across two distinct fields, creating cinematic visuals with motion graphics and fast-paced, comedic content.
 									</p>
 								</div>
 								
