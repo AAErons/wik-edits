@@ -307,7 +307,6 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									<div className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden ring-2 ring-brand/60">
 										<img src="/icons/wik.jpg" alt="Wik avatar" className="h-full w-full object-cover" loading="lazy" />
 									</div>
-									<h2 className="text-2xl font-semibold mb-4">Professional Gaming Video Editor</h2>
 									<p className="text-zinc-300 leading-relaxed">
 										I'm a freelance video editor based in Latvia, working across two distinct fields, creating cinematic visuals with motion graphics and fast-paced, comedic content.
 									</p>
