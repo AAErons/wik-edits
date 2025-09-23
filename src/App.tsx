@@ -81,7 +81,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									<iframe
 										className="w-full h-full"
 										src="https://www.youtube.com/embed/_Y5WufLwvrE?vq=hd1080&modestbranding=1&rel=0&autoplay=0&cc_load_policy=0&iv_load_policy=3&fs=1&disablekb=0&enablejsapi=1&origin=https://wik-edits.vercel.app"
-										title="Wik Edits Showreel"
+										title="Wik Showreel"
 										frameBorder="0"
 										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 										allowFullScreen
@@ -313,42 +313,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									</p>
 								</div>
 								
-								<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-									<div>
-										<h3 className="text-xl font-semibold mb-4">Experience</h3>
-										<ul className="space-y-3">
-											<li className="flex items-start gap-3">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-brand mt-0.5"><path fillRule="evenodd" d="M2.25 12a9.75 9.75 0 1 1 19.5 0 9.75 9.75 0 0 1-19.5 0Zm14.03-2.78a.75.75 0 0 0-1.06-1.06L10 13.69l-1.72-1.72a.75.75 0 1 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.75-5.75Z" clipRule="evenodd"/></svg>
-												<div>
-													<h4 className="font-medium">5+ Years</h4>
-													<p className="text-zinc-400 text-sm">Video editing experience</p>
-												</div>
-											</li>
-
-											<li className="flex items-start gap-3">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-brand mt-0.5"><path fillRule="evenodd" d="M2.25 12a9.75 9.75 0 1 1 19.5 0 9.75 9.75 0 0 1-19.5 0Zm14.03-2.78a.75.75 0 0 0-1.06-1.06L10 13.69l-1.72-1.72a.75.75 0 1 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.75-5.75Z" clipRule="evenodd"/></svg>
-												<div>
-													<h4 className="font-medium">Over 2 million views generated</h4>
-													<p className="text-zinc-400 text-sm">Across client channels</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-
-									<div>
-										<h3 className="text-xl font-semibold mb-4 md:text-right">Tools & Software</h3>
-										<ul className="space-y-2 md:space-y-1 md:w-full md:max-w-md md:ml-auto">
-											{['Adobe Premiere Pro', 'Adobe After Effects', 'Blender', 'FL Studio'].map((tool, index) => (
-												<li key={index} className="flex items-center gap-3 md:grid md:grid-cols-[1fr_0.5rem_auto] md:gap-3 md:w-full">
-													{/* spacer column for right alignment */}
-													<span aria-hidden className="hidden md:block" />
-													<div className="w-2 h-2 bg-brand rounded-full md:justify-self-center" />
-													<span className="text-sm md:text-right">{tool}</span>
-												</li>
-											))}
-										</ul>
-									</div>
-								</div>
+							
 								
 							{/* Social Media Links */}
 							<div className="text-center pt-8">
@@ -437,8 +402,8 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 					onClick={() => navigateTo('home')}
 					className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
 				>
-					<img src="/icons/wik.jpg" alt="Wik Edits logo" className="h-8 w-8 rounded object-cover ring-1 ring-brand/60" />
-					<span className="text-lg font-semibold tracking-wide">Wik Edits</span>
+						<img src="/icons/wik.jpg" alt="Wik logo" className="h-8 w-8 rounded object-cover ring-1 ring-brand/60" />
+						<span className="text-lg font-semibold tracking-wide">Wik</span>
 				</button>
 				<nav className="hidden gap-6 text-sm md:flex">
 					<button 
@@ -549,7 +514,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
 									<input ref={contactNameRef} name="name" id="name" autoComplete="name" required className="rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600 md:col-span-1" placeholder="Your name" />
 									<input type="email" name="email" id="email" autoComplete="email" required className="rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600 md:col-span-1" placeholder="Email or Discord" />
 									<textarea name="message" id="message" className="md:col-span-2 rounded-lg border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm outline-none placeholder:text-zinc-500 focus:border-zinc-600" rows={4} placeholder="What are you looking for?" />
-									<input type="hidden" name="_subject" value="New Wik Edits inquiry" />
+									<input type="hidden" name="_subject" value="New Wik inquiry" />
 									<button type="submit" disabled={isSubmitting} className="md:col-span-2 inline-flex w-full items-center justify-center rounded-lg bg-brand px-5 py-2 text-sm font-semibold hover:bg-brand-dark disabled:opacity-60">
 										{isSubmitting ? 'Sending…' : 'Send'}
 									</button>
@@ -577,7 +542,7 @@ const handleContactSubmit = async (e: FormEvent<HTMLFormElement>) => {
                                 </div>
                             )}
 						</div>
-					<p className="mt-6 text-xs text-zinc-500">© {new Date().getFullYear()} Wik Edits. All rights reserved.</p>
+						<p className="mt-6 text-xs text-zinc-500">© {new Date().getFullYear()} Wik. All rights reserved.</p>
 				</div>
 			</footer>
 		</main>
